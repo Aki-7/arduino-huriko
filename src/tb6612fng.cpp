@@ -39,6 +39,7 @@ void tb6612fng_set(TB6612FNG *self, TB6612FNGChannel channel, int value) {
   PinStatus in2 = value >= 0 ? LOW : HIGH;
 
   value = abs(value);
+  value = min(value, self->max);
   value = min(value, 255);
 
   if (channel == TB6612FNGChannel::A) {

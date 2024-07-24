@@ -13,6 +13,7 @@ struct TB6612FNG {
   int pin_bp; 
   int pin_b1; 
   int pin_b2; 
+  int max = 255; // 0 - 255
 
   int enabled_channel;
   bool error = false;
